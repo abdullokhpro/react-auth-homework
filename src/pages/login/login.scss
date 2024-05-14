@@ -1,0 +1,89 @@
+$primaryFirst: #363738;
+$primary: #ffffff;
+$secondary: #f5f5f5;
+$secondaryFirst: #fefaf1;
+$bg: #fff;
+$text: #fafafa;
+$textFirst: #7d8184;
+$textSecond: #000;
+$button: #000;
+$secondarySecond: #db4444;
+$buttonFirst: #00ff66;
+$buttonSecond: #db4444;
+$hoverButton: #e07575;
+$hoverButtonSecond: #a0bce0;
+
+.login {
+  padding-top: 60px;
+  padding-bottom: 140px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-family: "Inter", sans-serif;
+    line-height: 30px;
+    color: $textSecond;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: 4%;
+  }
+
+  &__text {
+    margin-bottom: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $textSecond;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    &__input {
+      padding: 8px;
+      border: none;
+      border-bottom: 1px solid black;
+    }
+
+    &__btns {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__btn {
+      padding: 16px 48px;
+      background: $buttonSecond;
+      color: $text;
+      border-radius: 5px;
+    }
+
+    &__link {
+      color: $secondarySecond;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .login {
+    &__left {
+      img {
+        display: none;
+      }
+    }
+
+    &__right {
+      justify-content: center;
+    }
+  }
+}

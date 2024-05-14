@@ -1,0 +1,129 @@
+$primaryFirst: #363738;
+$primary: #ffffff;
+$secondary: #f5f5f5;
+$secondaryFirst: #fefaf1;
+$bg: #fff;
+$text: #fafafa;
+$textFirst: #7d8184;
+$textSecond: #000;
+$button: #000;
+$secondarySecond: #db4444;
+$buttonFirst: #00ff66;
+$buttonSecond: #db4444;
+$hoverButton: #e07575;
+$hoverButtonSecond: #a0bce0;
+
+.products {
+  padding-bottom: 70px;
+  &__cards,
+  .loading {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__card,
+  .loading__item {
+    padding: 10px;
+
+    &__top,
+    .loading__img {
+      height: 250px;
+      background-color: #fff;
+      padding: 20px;
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__text {
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    &__price {
+      color: $secondarySecond;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 16px 48px;
+    color: $text;
+    background-color: $buttonSecond;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.loading__title {
+  width: 80%;
+  height: 26px;
+  margin-top: 10px;
+}
+
+.loading__title:last-child {
+  width: 60%;
+}
+
+.bg__animation {
+  background: linear-gradient(90deg, #aaa, #eee, #aaa);
+
+  background-size: 200%;
+  animation: bgMove 1s linear 0s infinite;
+}
+
+.products__card__top__img {
+  cursor: pointer;
+}
+
+@keyframes bgMove {
+  to {
+    background-position: 200%;
+  }
+}
+
+@media (max-width: 950px) {
+  .products {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

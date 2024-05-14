@@ -1,0 +1,81 @@
+$primaryFirst: #363738;
+$primary: #ffffff;
+$secondary: #f5f5f5;
+$secondaryFirst: #fefaf1;
+$bg: #fff;
+$text: #fafafa;
+$textFirst: #7d8184;
+$textSecond: #000;
+$button: #000;
+$secondarySecond: #db4444;
+$buttonFirst: #00ff66;
+$buttonSecond: #db4444;
+$hoverButton: #e07575;
+$hoverButtonSecond: #a0bce0;
+
+.hero {
+  padding-top: 40px;
+  padding-top: 101px;
+
+  padding-bottom: 95px;
+
+  &__container {
+    color: $text;
+    padding: 47px 58px 64px;
+    background: url(../../assets/hero/phone.png) no-repeat center;
+    background-color: $button;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__iphone-series {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  &__iphone__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__title {
+    max-width: 294px;
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 4%;
+  }
+
+  &__shop {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    &__text {
+      padding-bottom: 5px;
+      font-weight: 500;
+      font-size: 18px;
+      border-bottom: 1px solid $text;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .hero {
+    &__container {
+      background: linear-gradient(
+          rgba(255, 255, 255, 0.175),
+          rgba(255, 255, 255, 0.375)
+        ),
+        url(../../../images/home/hero/hero-bg.png) no-repeat center;
+    }
+  }
+}

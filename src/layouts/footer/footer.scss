@@ -1,0 +1,75 @@
+$primaryFirst: #363738;
+$primary: #ffffff;
+$secondary: #f5f5f5;
+$secondaryFirst: #fefaf1;
+$bg: #fff;
+$text: #fafafa;
+$textFirst: #7d8184;
+$textSecond: #000;
+$button: #000;
+$secondarySecond: #db4444;
+$buttonFirst: #00ff66;
+$buttonSecond: #db4444;
+$hoverButton: #e07575;
+$hoverButtonSecond: #a0bce0;
+
+.footer {
+  padding: 80px 135px 60px 135px;
+  background-color: $button;
+  color: $text;
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__title {
+      font-family: "Inter", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    &__main-text {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    &__form {
+      position: relative;
+
+      &__img {
+        position: absolute;
+        right: 10%;
+        top: 20%;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #fff;
+      background-color: transparent;
+      border-radius: 5px;
+    }
+
+    &__download {
+      display: flex;
+      gap: 8px;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 24px;
+    }
+  }
+}
